@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>야 너두 파이썬?</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🐍 야 너두 파이썬?</h1>
+    <p>아래 파이썬 코드를 보고 출력 결과를 예측해보세요!</p>
+
+    <div class="code-box">
+      <h3>📌 문제 코드</h3>
+      <pre id="pythonCode">{{ code }}</pre>
+    </div>
+
+    <div class="answer-box">
+      <label for="userAnswer">🧠 예측한 출력 결과</label><br>
+      <textarea id="userAnswer" rows="5" cols="50" placeholder="예: Hello, Python!\n12"></textarea>
+    </div>
+
+    <button id="checkBtn">정답 확인</button>
+    <button id="nextBtn" style="display:none;">다음 문제 ▶</button>
+
+    <input type="hidden" id="correctAnswer" value="{{ answer }}">
+    <div id="result" class="result-box"></div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
